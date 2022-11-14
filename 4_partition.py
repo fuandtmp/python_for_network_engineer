@@ -36,7 +36,17 @@ Next-Hop           {ospf_list[3]}
 Last update        {ospf_list[4]}
 Outbound Interface {ospf_list[5]}
 ''')
-# 4.7
-# mac = "AAAA:BBBB:CCCC"
+# 4.7 - not done
+mac = "AAAA:BBBB:CCCC"
+bin_mac = "{:b}".format(int(mac.replace(":", ""), 16))
+print(bin_mac)
 
 # 4.8
+ip = "192.168.3.1"
+list_ip = ip.split('.')
+template = '''
+IP Address:
+{0:<8} {1:<8} {2:<8} {3:<8}
+{0:08b} {1:08b} {2:08b} {3:08b}
+'''
+print(template.format(int(list_ip[0]), int(list_ip[1]), int(list_ip[2]), int(list_ip[3])))
