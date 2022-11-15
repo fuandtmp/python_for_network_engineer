@@ -1,5 +1,5 @@
 # https://pyneng.readthedocs.io/ru/latest/exercises/05_exercises.html
-# 5.1
+# 5.1a
 london_co = {
     "r1": {
         "location": "21 New Globe Walk",
@@ -28,5 +28,10 @@ london_co = {
 
 print('Введите имя устройства: ', end='')
 equipment = input()
-
-print(london_co[equipment])
+# 5.1b
+get_dict = london_co[equipment]
+list_of_getted_dict = list(get_dict.keys())
+print(f'Введите имя параметра ({" ".join(list_of_getted_dict)}): ', end='')
+key = input()
+# 5.1c and 5.1d
+print(london_co[equipment].get(key.lower(), "Такого параметра нет"))
