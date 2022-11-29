@@ -9,7 +9,7 @@ ext_file = argv[2]
 ignore = ["duplex", "alias", "configuration"]
 # f = open('test.txt', 'w')
 
-with open('config_sw1.txt') as config:
+with open(file) as config:
     for line in config:
         words = line.split()
         cross_words = set(words) & set(ignore)
