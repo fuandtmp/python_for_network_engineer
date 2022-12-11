@@ -23,4 +23,3 @@ def to_make_conf_trunk_ports(interfaces, template):
 
 
 to_make_conf_trunk_ports(trunk_config, trunk_mode_template)
-
